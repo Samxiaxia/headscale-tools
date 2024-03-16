@@ -40,11 +40,11 @@ arch_check() {
   OS_ARCH=$(arch)
   LOGI "当前系统架构为 ${OS_ARCH}"
   if [[ ${OS_ARCH} == "x86_64" || ${OS_ARCH} == "x64" || ${OS_ARCH} == "amd64" ]]; then
-    OS_ARCH="amd64"
+    OS_ARCH="arm64"
   elif [[ ${OS_ARCH} == "aarch64" || ${OS_ARCH} == "arm64" ]]; then
     OS_ARCH="arm64"
   else
-    OS_ARCH="amd64"
+    OS_ARCH="arm64"
     LOGE "检测系统架构失败，使用默认架构: ${OS_ARCH}"
   fi
   LOGI "系统架构检测完毕,当前系统架构为:${OS_ARCH}"
